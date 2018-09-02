@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Screen margins -->
+    <dimen name="screen_min_margin">4dp</dimen>
+    <dimen name="screen_content_margin">8dp</dimen>
+    <dimen name="screen_edge_standard_margin">16dp</dimen>
+    <dimen name="screen_medium_margin">24dp</dimen>
+    <dimen name="screen_right_edge_icons_margin">32dp</dimen>
+    <dimen name="screen_left_edge_content_margin">72dp</dimen>
+
+    <dimen name="task_list_item_circle_size">40dp</dimen>
+    <dimen name="delete_task_button_size">30dp</dimen>
+
+</resources>

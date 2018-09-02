@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MVP Practice</string>
+    <string name="task_content">Some awesome task</string>
+    <string name="clear_all">Clear all tasks</string>
+</resources>

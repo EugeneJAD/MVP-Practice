@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="task" type="com.eugene.mvppractice.model.Task"/>
+    </data>
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/task_icon_bg"
+            android:layout_width="@dimen/task_list_item_circle_size"
+            android:layout_height="@dimen/task_list_item_circle_size"
+            android:layout_marginStart="@dimen/screen_edge_standard_margin"
+            android:background="@drawable/circle"
+            app:layout_constraintBottom_toBottomOf="@+id/task_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/task_content">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/task_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:tint="@android:color/white"
+                app:srcCompat="@drawable/ic_local_florist_black_24dp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/task_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/screen_edge_standard_margin"
+            android:layout_marginEnd="@dimen/screen_edge_standard_margin"
+            android:layout_marginStart="@dimen/screen_edge_standard_margin"
+            android:layout_marginTop="@dimen/screen_edge_standard_margin"
+            android:text="@{task.content + ' ' + String.valueOf(task.id)}"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/task_delete_button"
+            app:layout_constraintStart_toEndOf="@+id/task_icon_bg"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/task_content" />
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/task_delete_button"
+            android:layout_width="@dimen/delete_task_button_size"
+            android:layout_height="@dimen/delete_task_button_size"
+            android:layout_marginEnd="@dimen/screen_edge_standard_margin"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:src="@drawable/ic_close_black_24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/task_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/task_content" />
+    </android.support.constraint.ConstraintLayout>
+</layout>

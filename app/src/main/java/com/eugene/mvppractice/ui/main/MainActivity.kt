@@ -65,4 +65,9 @@ class MainActivity : AppCompatActivity(), IMainView {
     override fun showTasks(tasks: List<Task>) {
         adapter.submitList(tasks)
     }
+
+    override fun onDestroy() {
+        mPresenter.detachView()
+        super.onDestroy()
+    }
 }
